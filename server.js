@@ -15,7 +15,34 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: true}));
 
 // GET 요청에 대한 라우트 핸들러를 정의합니다. "/api/hello" 경로에 대한 GET 요청이 수신되면 "Hello Express!" 메시지를 반환합니다.
-app.get("/api/hello", (req,res) => {res.send({message: "Hello Express!"})});
+app.get("/api/customers", (req, res) => {
+    res.send([
+            {
+              'id': 1,
+              'image' : 'https://picsum.photos/64/64/?img=1',
+              'name' : '김누구',
+              'birthday' : '030808',
+              'gender' : '남자',
+              'job' : '대학생'
+            },
+            {
+              'id': 2,
+              'image' : 'https://picsum.photos/64/64?img=2',
+              'name' : '갑',
+              'birthday' : '880901',
+              'gender' : '남자',
+              'job' : '회사원'
+            },
+            {
+              'id': 3,
+              'image' : 'https://picsum.photos/64/64?img=3',
+              'name' : '을',
+              'birthday' : '950523',
+              'gender' : '남자',
+              'job' : '자영업자'
+            }
+        ]);
+});
 
 // Express 애플리케이션을 지정된 포트에서 실행합니다.
 app.listen(port, () => console.log(`Listening on port ${port}`));
