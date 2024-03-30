@@ -2,13 +2,14 @@
         "name": "management",
         "version": "1.0.0",
         "scripts": {
+                "start": "react-scripts start",
                 "client": "cd client && npm start",
                 "server": "nodemon server.js",
-                "dev": "concurrent -kill-orther-on-aill \"npm run server\" \"npm run client\""
+                "dev": "concurrently -kill-other-on-fail \"npm run server\" \"npm run client\""
         },
         "dependencies": {
                 "body-parser": "^1.18.3",
-                "express": "^4.16.4"
+                "express": "^4.19.2"
         },
         "devDependencies": {
                 "concurrently": "^4.0.1",
