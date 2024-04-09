@@ -1,0 +1,7 @@
+{
+    "host" : "management-tutorial.cjiggio44ckd.us-east-1.rds.amazonaws.com",
+    "user" : "admin",
+    "password" : "12345678",
+    "port" : "3306",
+    "database": "management"
+}
